@@ -3,6 +3,21 @@
  * @author kmturley
  **/
 
+header-custom {
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out
+}
+
 header-custom::shadow p {
-    background-color: tomato;
+    font-size: 16px;
+    font-size: 1rem;
+    background-color: red;
+    border: 1px solid green
+}
+
+@media (max-width: 1280px) {
+
+    header-custom::shadow p {
+        font-size: 1rem
+    }
 }
