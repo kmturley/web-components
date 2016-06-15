@@ -4,12 +4,18 @@
     <meta charset="utf-8" />
     <title>Web Components</title>
     <script src="../node_modules/webcomponents.js/webcomponents.min.js"></script>
-    <link rel="import" href="components/header-custom/header-custom.html" />
+    <link rel="import" href="../node_modules/app-router/app-router.html" />
 </head>
 <body>
-    <h1>Web Components</h1>
-    <p>Example of web components</p>
-    <header-custom who="Andy"></header-custom>
-    <header-custom who="Terry"></header-custom>
+    <header>
+        <ul>
+            <li><a href="#/">Intro</a></li>
+            <li><a href="#/news">News</a></li>
+        </ul>
+    </header>
+    <app-router>
+        <app-route path="/news" import="./components/news.html" template></app-route>
+        <app-route path="*" import="./components/intro.html" template></app-route>
+    </app-router>
 </body>
 </html>
