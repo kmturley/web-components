@@ -16,6 +16,9 @@
     "app-router": "github:kmturley/app-router",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "postcss-cssnext": "^2.6.0",
     "webcomponents.js": "^0.7.22"
   }
 }

@@ -1,0 +1,24 @@
+/**
+ * @group header-custom
+ * @author kmturley
+ **/
+
+:root {
+    --fontSize: 1rem;
+    --fontSize2: 2rem;
+}
+
+@custom-media --desktop (min-width: 1280px);
+
+header-custom {
+    transition: all .5s ease-out;
+
+    &::shadow p {
+        font-size: var(--fontSize);
+        background-color: green;
+
+        @media (--desktop) {
+            font-size: var(--fontSize2);
+        }
+    }
+}
