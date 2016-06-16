@@ -3,22 +3,23 @@
  * @author kmturley
  **/
 
+@custom-media --desktop (min-width: 1280px);
+
 :root {
     --fontSize: 1rem;
     --fontSize2: 2rem;
 }
 
-@custom-media --desktop (min-width: 1280px);
+:host {
+    background-color: blue;
+    display: block;
+    transition: background-color .5s ease-out;
+}
 
-header-custom {
-    transition: all .5s ease-out;
+p {
+    font-size: var(--fontSize);
 
-    &::shadow p {
-        font-size: var(--fontSize);
-        background-color: green;
-
-        @media (--desktop) {
-            font-size: var(--fontSize2);
-        }
+    @media (--desktop) {
+        font-size: var(--fontSize2);
     }
 }
