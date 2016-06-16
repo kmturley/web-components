@@ -38,7 +38,7 @@ gulp.task('pcss', function () {
 
 gulp.task('reload', ['pcss'], function () {
     'use strict';
-    // there seems to be a bug with livereload and css files within web components, so forcing a reload here
+    // there seems to be a bug with livereload and css files within web components, so forcing a reload using js files instead
     return gulp.src(global.paths.src + global.paths.js)
             .pipe(connect.reload());
 });
